@@ -1359,6 +1359,10 @@ proxy.on("proxyReqWs", (proxyReq, req, socket, options, head) => {
 });
 
 app.use(async (req, res) => {
+  if (req.path === "/") {
+    return res.sendFile(path.join(process.cwd(), "src", "public", "loading.html"));
+  }
+
   if (!isConfigured() && !req.path.startsWith("/setup")) {
     return res.redirect("/setup");
   }
