@@ -6,3 +6,9 @@ restartPolicyType = "on_failure"
 
 [variables]
 PORT = "8080"
+ENABLE_WEB_TUI = "true"
+INTERNAL_GATEWAY_HOST = "0.0.0.0"
+INTERNAL_GATEWAY_PORT = "18789"
+OPENCLAW_STATE_DIR = "/data/.openclaw"
+OPENCLAW_WORKSPACE_DIR = "/data/workspace"
+RAILWAY_RUN_UID = "0"
